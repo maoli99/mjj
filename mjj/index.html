@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美加净</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(254, 234, 243);
+      }
+      /* 头部样式 */
+      header {
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        height: 140px;
+        min-width: 900px;
+        background-image: linear-gradient(
+          0deg,
+          rgba(209, 209, 209, 1),
+          rgba(255, 255, 255, 1)
+        );
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+        position: relative;
+        z-index: 1;
+      }
+      .header_r input[type="text"] {
+        float: right;
+        height: 28px;
+        width: 110px;
+        outline: none;
+        margin: 20px 40px 0 0;
+        padding: 0 38px 0 10px;
+        border: 1px solid pink;
+        border-radius: 20px;
+        background-image: url(./img/搜索.png);
+        background-repeat: no-repeat;
+        background-position: 90%;
+        background-size: 17px;
+      }
+      .signboard {
+        position: relative;
+        align-self: center;
+        min-width: 200px;
+        height: 100px;
+      }
+      .signboard div {
+        float: right;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        width: 90px;
+        font-size: 0.8rem;
+        /* vertical-align: middle; */
+      }
+      .signboard .head_img {
+        height: 100px;
+        margin-right: 10px;
+      }
+      .signboard button {
+        margin-top: 10px;
+        width: 64px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(255, 112, 145);
+        color: white;
+        font-size: 0.6rem;
+      }
+      .signboard button:active {
+        font-size: 0.59rem;
+        box-shadow: 1px 1px 1px 1px rgba(85, 85, 85, 0.678) inset;
+      }
+      #nav {
+        width: 680px;
+        margin-top: 5px;
+      }
+      #nav ul {
+        position: relative;
+        height: 50px;
+        margin-left: 20px;
+        line-height: 50px;
+        vertical-align: middle;
+        list-style-type: none;
+      }
+      #nav li {
+        float: left;
+        cursor: pointer;
+        margin-right: 40px;
+        font-size: 14px;
+      }
+      #nav #sideline {
+        position: absolute;
+        bottom: 0;
+        height: 5px;
+        background-color: cornflowerblue;
+        transition: 0.4s;
+      }
+      /*  */
+      main {
+        /* display: flex;
+        justify-content: center; */
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .banner {
+        /* display: flex;
+        justify-content: center;
+        flex-wrap: wrap; */
+        position: relative;
+        height: 370px;
+        overflow: hidden;
+      }
+      .banner-img {
+        position: absolute;
+        width: 5000px;
+      }
+      .banner img {
+        float: left;
+        width: 1000px;
+      }
+
+      .banner-switchover {
+        position: absolute;
+        /* width: 100px; */
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .banner-switchover > span {
+        cursor: pointer;
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin: 0 7px;
+        background: #7b7d80;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+      .banner-switchover .on {
+        background: #28a4c9;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header_r">
+        <img
+          src="./img/logo.png"
+          alt="logo"
+          class="logo"
+          style="width: 100px"
+        />
+        <input type="text" placeholder="搜索" />
+        <nav id="nav">
+          <ul>
+            <li>首页</li>
+            <li>品牌介绍</li>
+            <li>系列产品</li>
+            <li>官方旗舰店</li>
+            <li>品牌动态</li>
+            <li>行业资讯</li>
+            <li>联系我们</li>
+            <!-- <div id="sideline" style="left: 104px"></div> -->
+            <div id="sideline" style="left: 0px; width: 28px"></div>
+          </ul>
+        </nav>
+      </div>
+      <div class="signboard">
+        <img src="./img/head_img.png" alt="" class="head_img" />
+        <div>
+          <p>抗皱抗初老</p>
+          <p>酵醒新美肌</p>
+          <button>立即购买</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="banner">
+        <div class="banner-img">
+          <img src="./img/banner1.png" alt="" />
+          <img src="./img/banner2.png" alt="" />
+        </div>
+        <div class="banner-switchover">
+          <span index="1" class="on"></span>
+          <span index="2"></span>
+        </div>
+      </div>
+    </main>
+    <!-- 边测栏 -->
+    <aside></aside>
+    <footer></footer>
+  </body>
+  <script src="./js/jQuery/jquery-3.5.1.js"></script>
+  <script>
+    ////导航栏特效
+    // 传入导航栏列表和下划线
+    navAnimation(
+      document.querySelectorAll("#nav ul li"),
+      document.querySelector("#sideline")
+    );
+    function navAnimation(nav, sideline) {
+      // 获取初始 left 和 width 用于返回
+      let left = sideline.style.left;
+      let width = sideline.style.width;
+      // 获取 margin-right
+      let r = parseFloat(window.getComputedStyle(nav[0]).marginRight);
+      // 获取各个列表的 width
+      let w = [0];
+      // 保存各个li距离第一个li之间的间距
+      let distance = [0];
+      for (let i = 0; i < nav.length; i++) {
+        w[i] = parseFloat(window.getComputedStyle(nav[i]).width);
+        nav[i].index = i;
+        distance[i + 1] = distance[i] + w[i] + r;
+        nav[i].addEventListener("mouseenter", () => {
+          sideline.style.left = distance[i] + "px";
+          sideline.style.width = w[i] + "px";
+        });
+      }
+      nav[0].parentNode.addEventListener("mouseleave", () => {
+        sideline.style.left = left;
+        sideline.style.width = width;
+      });
+    }
+    ////banner特效
+    $(function () {
+      $(".banner-switchover>span").mouseenter(function () {
+        $(this).addClass("on");
+        $(this).siblings().removeClass("on");
+        $(".banner-img").
+      });
+    });
+  </script>
+</html>
