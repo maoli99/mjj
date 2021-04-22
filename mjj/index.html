@@ -4,152 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>美加净</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: rgb(254, 234, 243);
-      }
-      /* 头部样式 */
-      header {
-        display: flex;
-        /* flex-direction: column; */
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: flex-end;
-        height: 140px;
-        min-width: 900px;
-        background-image: linear-gradient(
-          0deg,
-          rgba(209, 209, 209, 1),
-          rgba(255, 255, 255, 1)
-        );
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
-        position: relative;
-        z-index: 1;
-      }
-      .header_r input[type="text"] {
-        float: right;
-        height: 28px;
-        width: 110px;
-        outline: none;
-        margin: 20px 40px 0 0;
-        padding: 0 38px 0 10px;
-        border: 1px solid pink;
-        border-radius: 20px;
-        background-image: url(./img/搜索.png);
-        background-repeat: no-repeat;
-        background-position: 90%;
-        background-size: 17px;
-      }
-      .signboard {
-        position: relative;
-        align-self: center;
-        min-width: 200px;
-        height: 100px;
-      }
-      .signboard div {
-        float: right;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-end;
-        width: 90px;
-        font-size: 0.8rem;
-        /* vertical-align: middle; */
-      }
-      .signboard .head_img {
-        height: 100px;
-        margin-right: 10px;
-      }
-      .signboard button {
-        margin-top: 10px;
-        width: 64px;
-        height: 20px;
-        border: none;
-        cursor: pointer;
-        background-color: rgb(255, 112, 145);
-        color: white;
-        font-size: 0.6rem;
-      }
-      .signboard button:active {
-        font-size: 0.59rem;
-        box-shadow: 1px 1px 1px 1px rgba(85, 85, 85, 0.678) inset;
-      }
-      #nav {
-        width: 680px;
-        margin-top: 5px;
-      }
-      #nav ul {
-        position: relative;
-        height: 50px;
-        margin-left: 20px;
-        line-height: 50px;
-        vertical-align: middle;
-        list-style-type: none;
-      }
-      #nav li {
-        float: left;
-        cursor: pointer;
-        margin-right: 40px;
-        font-size: 14px;
-      }
-      #nav #sideline {
-        position: absolute;
-        bottom: 0;
-        height: 5px;
-        background-color: cornflowerblue;
-        transition: 0.4s;
-      }
-      /*  */
-      main {
-        /* display: flex;
-        justify-content: center; */
-        width: 1000px;
-        margin: 0 auto;
-      }
-      .banner {
-        /* display: flex;
-        justify-content: center;
-        flex-wrap: wrap; */
-        position: relative;
-        height: 370px;
-        overflow: hidden;
-      }
-      .banner-img {
-        position: absolute;
-        width: 5000px;
-      }
-      .banner img {
-        float: left;
-        width: 1000px;
-      }
-
-      .banner-switchover {
-        position: absolute;
-        /* width: 100px; */
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .banner-switchover > span {
-        cursor: pointer;
-        float: left;
-        width: 10px;
-        height: 10px;
-        margin: 0 7px;
-        background: #7b7d80;
-        border-radius: 50%;
-        border: 1px solid #fff;
-      }
-      .banner-switchover .on {
-        background: #28a4c9;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <header>
@@ -160,16 +16,18 @@
           class="logo"
           style="width: 100px"
         />
-        <input type="text" placeholder="搜索" />
+        <input type="text" placeholder="搜索" class="seek" />
         <nav id="nav">
           <ul>
-            <li>首页</li>
-            <li>品牌介绍</li>
-            <li>系列产品</li>
-            <li>官方旗舰店</li>
-            <li>品牌动态</li>
-            <li>行业资讯</li>
-            <li>联系我们</li>
+            <li><a href="#">首页</a></li>
+            <li><a href="./about/">品牌介绍</a></li>
+            <li><a href="./product/">系列产品</a></li>
+            <li>
+              <a href="http://meijiajin.com/dianpu/177.html">官方旗舰店</a>
+            </li>
+            <li><a href="./ppdt/">品牌动态</a></li>
+            <li><a href="./news/">行业咨询</a></li>
+            <li><a href="./contact/">联系我们</a></li>
             <!-- <div id="sideline" style="left: 104px"></div> -->
             <div id="sideline" style="left: 0px; width: 28px"></div>
           </ul>
@@ -180,7 +38,7 @@
         <div>
           <p>抗皱抗初老</p>
           <p>酵醒新美肌</p>
-          <button>立即购买</button>
+          <a target="_blank" id="btn_buy">立即购买</a>
         </div>
       </div>
     </header>
@@ -191,54 +49,176 @@
           <img src="./img/banner2.png" alt="" />
         </div>
         <div class="banner-switchover">
-          <span index="1" class="on"></span>
-          <span index="2"></span>
+          <span class="on"></span>
+          <span></span>
         </div>
       </div>
+      <section class="story">
+        <h2>品牌故事</h2>
+        <p>
+          美加净是上海家化最为悠久、知名度最高的大众化品牌之一，
+          深刻了解中国女性的个人护理需求，美加净官网向其提供货真价实的产品（如：美加净银耳珍珠滋养霜等），
+          将中国的传统美容经典与现代护肤科技完美结合，美加净帮助中国女性绽放真实之美、本真之美、真情之美。
+        </p>
+        <img src="./img/s.png" alt="" />
+      </section>
+      <section class="product">
+        <img src="./img/s.png" class="bgshadow" alt="" />
+        <h2>⚬ 热销推荐 ⚬</h2>
+        <div class="product-item">
+          <div class="ps">
+            <h3>套装热销冠军</h3>
+            <p class="product_name">补水保湿套装</p>
+            <ul>
+              <li>
+                保湿黄金——古田雪耳 产自雪耳之乡 富含雪耳 多糖 多种氨基酸卓效焕活
+                双效保湿
+              </li>
+              <li>焕亮因子 烟酰胺+水解珍珠 匀净肤色 改善暗沉</li>
+              <li>水光因子——透明质酸钠 锁水保湿 莹润肌肤</li>
+            </ul>
+            <p class="yj">原价：¥248</p>
+            <p class="sj">售价：<span class="yen">¥</span><span>185</span></p>
+            <a id="btn_buy">点击购买</a>
+          </div>
+          <div class="img-show">
+            <img src="./img/p1.png" alt="补水保湿套装" />
+          </div>
+
+          <div class="img-show">
+            <img src="./img/p2.png" alt="酵米焕活精华霜保湿补水" />
+          </div>
+          <div class="ps">
+            <h3>保湿单销冠军</h3>
+            <p class="product_name">酵米焕活精华霜保湿补水</p>
+            <ul>
+              <li>亲肤性佳 密集滋养 肌肤弹嫩 细腻平滑</li>
+              <li>紧致肌肤 淡化眼角细纹 抬头纹等</li>
+              <li>无添加 脆弱肌肤安心用</li>
+            </ul>
+            <p class="yj">原价：¥119</p>
+            <p class="sj">售价：<span class="yen">¥</span><span>99</span></p>
+            <a id="btn_buy">点击购买</a>
+          </div>
+
+          <div class="ps">
+            <h3>防晒单销冠军</h3>
+            <p class="product_name">美加净小金瓶防晒霜</p>
+            <ul>
+              <li>高倍防晒 SPF50+隔离UVB 持久防御 拒绝 晒红晒伤</li>
+              <li>紧致肌肤 淡化眼角细纹 抬头纹等</li>
+              <li>无添加 脆弱肌肤安心用</li>
+            </ul>
+            <p class="yj">原价：¥150</p>
+            <p class="sj">售价：<span class="yen">¥</span><span>94.50</span></p>
+            <a id="btn_buy">点击购买</a>
+          </div>
+          <div class="img-show">
+            <img src="./img/p3.png" alt="美加净小金瓶防晒霜" />
+          </div>
+        </div>
+      </section>
+      <section class="more">
+        <div style="position: relative">
+          <img class="bg" src="./img/yb.png" alt="" />
+        </div>
+        <h2>⚬ 更多推荐 ⚬</h2>
+        <div class="product-item">
+          <div class="more-product">
+            <img src="./img/p4.png" alt="美加净洁面泡沫慕斯" />
+            <p style="vertical-align: middle">
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="product_name">美加净洁面泡沫慕斯</p>
+            <p>
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="sj">售价：<span class="yen">¥</span><span>94.50</span></p>
+            <a id="btn_buy">点击购买</a>
+          </div>
+          <div class="more-product">
+            <img src="./img/p5.png" alt="美加净大白兔润唇膏组合" />
+            <p style="vertical-align: middle">
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="product_name">美加净大白兔润唇膏组合</p>
+            <p>
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="sj">售价：<span class="yen">¥</span><span>35.00</span></p>
+            <a
+              href="http://www.meijiajin.com/product/"
+              target="_blank"
+              id="btn_buy"
+              >点击购买</a
+            >
+          </div>
+          <div class="more-product">
+            <img src="./img/p6.png" alt="美加净全心全意护手霜" />
+            <p style="vertical-align: middle">
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="product_name">美加净全心全意护手霜</p>
+            <p>
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="sj">售价：<span class="yen">¥</span><span>60.00</span></p>
+            <a
+              href="http://www.meijiajin.com/product/"
+              target="_blank"
+              id="btn_buy"
+              >点击购买</a
+            >
+          </div>
+          <div class="more-product">
+            <img src="./img/p7.png" alt="美加净橙花精华素" />
+            <p style="vertical-align: middle">
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="product_name">美加净橙花精华素</p>
+            <p>
+              <img src="./img/more_titleborder.png" alt="" />
+            </p>
+            <p class="sj">售价：<span class="yen">¥</span><span>99.00</span></p>
+            <a
+              href="http://www.meijiajin.com/product/"
+              target="_blank"
+              id="btn_buy"
+              >点击购买</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- 边测栏 -->
-    <aside></aside>
-    <footer></footer>
+    <footer>
+      <img src="./img/bl.png" alt="" style="width: 1000px" />
+      <ul class="serve">
+        <li>
+          <img src="./img/che-tianchong.png" alt="" />
+          <span>免运费</span>
+        </li>
+        <li>
+          <img src="./img/anquan.png" alt="" />
+          <span>安全保障</span>
+        </li>
+        <li>
+          <img src="./img/service.png" alt="" />
+          <span>七天退换</span>
+        </li>
+        <li>
+          <img src="./img/fh.png" alt="" />
+          <span>按时发货</span>
+        </li>
+      </ul>
+      <div class="fmenu">
+        <a href="/brand/">公司简介</a> 丨 <a href="/ppdt/">品牌动态</a> 丨
+        <a href="/news/">行业咨询</a> 丨 <a href="/contact/">联系我们</a> 丨
+        <a href="http://www.meijiajin.com/sitemap.html">网站地图</a> 丨
+        <a href="http://www.meijiajin.com/sitemap.xml">xml地图</a>
+        <br />Copyright ©2015 美加净官网 版权所有
+      </div>
+    </footer>
   </body>
   <script src="./js/jQuery/jquery-3.5.1.js"></script>
-  <script>
-    ////导航栏特效
-    // 传入导航栏列表和下划线
-    navAnimation(
-      document.querySelectorAll("#nav ul li"),
-      document.querySelector("#sideline")
-    );
-    function navAnimation(nav, sideline) {
-      // 获取初始 left 和 width 用于返回
-      let left = sideline.style.left;
-      let width = sideline.style.width;
-      // 获取 margin-right
-      let r = parseFloat(window.getComputedStyle(nav[0]).marginRight);
-      // 获取各个列表的 width
-      let w = [0];
-      // 保存各个li距离第一个li之间的间距
-      let distance = [0];
-      for (let i = 0; i < nav.length; i++) {
-        w[i] = parseFloat(window.getComputedStyle(nav[i]).width);
-        nav[i].index = i;
-        distance[i + 1] = distance[i] + w[i] + r;
-        nav[i].addEventListener("mouseenter", () => {
-          sideline.style.left = distance[i] + "px";
-          sideline.style.width = w[i] + "px";
-        });
-      }
-      nav[0].parentNode.addEventListener("mouseleave", () => {
-        sideline.style.left = left;
-        sideline.style.width = width;
-      });
-    }
-    ////banner特效
-    $(function () {
-      $(".banner-switchover>span").mouseenter(function () {
-        $(this).addClass("on");
-        $(this).siblings().removeClass("on");
-        $(".banner-img").
-      });
-    });
-  </script>
+  <script src="./index.js"></script>
 </html>
