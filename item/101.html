@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>系列产品</title>
+    <link
+      rel="stylesheet"
+      href="../font/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/all.css" />
+    <style>
+      a {
+        color: white;
+      }
+      em,
+      i {
+        font-style: normal;
+      }
+      .sidebar {
+        float: left;
+        font-size: 14px;
+      }
+      .sidebar ul {
+        padding-left: 30px;
+        padding-right: 25px;
+        margin-bottom: 20px;
+        /* margin: 20px auto; */
+        list-style: none;
+      }
+
+      .sidebar ul li {
+        display: flex;
+        width: 122px;
+        height: 112px;
+        margin-bottom: 13px;
+        border: 1px solid #f0f0f0;
+        border-radius: 5px;
+        cursor: pointer;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+      }
+      .sidebar img {
+        width: 102px;
+        height: 90px;
+      }
+      .content {
+        /* display: flex; */
+        background-color: white;
+        color: #f69797;
+        line-height: 30px;
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+      }
+      .num {
+        margin: 20px 0;
+        padding: 15px 0;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+      }
+      .text {
+        display: inline-block;
+        width: 400px;
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+      .select {
+        display: inline-block;
+      }
+      .params-name {
+        padding-right: 20px;
+        font-size: 14px;
+        color: #8d8d8d;
+        line-height: 36px;
+      }
+      .show {
+        width: 95px;
+        outline: none;
+        border: none;
+        text-align: center;
+        line-height: 18px;
+        font-size: 16px;
+        color: #666;
+      }
+      .price {
+        float: right;
+        padding-right: 30px;
+        color: #d44d44;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .yen {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .buy {
+        width: 125px;
+        height: 40px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #678ee7;
+        font-size: 13px;
+        color: white;
+        cursor: pointer;
+      }
+      .buy:hover {
+        background-color: #4769c2;
+      }
+      .content h2 {
+        color: #333;
+        font-size: 24px;
+        font-weight: inherit;
+        line-height: 1.25;
+        margin-bottom: 5px;
+      }
+      .content h4 {
+        font-size: 14px;
+        font-weight: inherit;
+        line-height: 1.5;
+        color: #bdbdbd;
+      }
+      .content strong {
+        color: #f69797;
+      }
+      .big {
+        float: left;
+      }
+      .content .big img {
+        width: 380px;
+        height: 345px;
+      }
+      .fmenu {
+        /* margin: 0; */
+        /* padding-top: 20px; */
+        padding: 20px 0;
+      }
+      main {
+        margin-top: 10px;
+        margin: 10px auto;
+      }
+      .container {
+        overflow: hidden;
+        height: 500px;
+        padding-top: 20px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #dcdcdc;
+        border-color: rgba(0, 0, 0, 0.14);
+        box-shadow: 0 3px 8px -6px rgb(0 0 0 / 10%);
+      }
+      .fa {
+        cursor: pointer;
+      }
+      .fa:active {
+        color: lightcoral;
+      }
+      .title,
+      .num {
+        padding-left: 8px;
+      }
+      /* .sidebar ul li {
+        border: 3px solid #ccc;
+      } */
+    </style>
+    <link rel="stylesheet" href="../css/answer.css" />
+  </head>
+  <body>
+    <header class="">
+      <div class="header_r">
+        <img src="../img/logo.png" alt="logo" class="logo" />
+        <input class="seek" type="text" placeholder="搜索" />
+        <nav id="nav">
+          <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../about/index.html">品牌介绍</a></li>
+            <li><a href="../product/index.html">系列产品</a></li>
+            <li>
+              <a href="http://meijiajin.com/dianpu/177.html">官方旗舰店</a>
+            </li>
+            <li><a href="../ppdt/index.html">品牌动态</a></li>
+            <li><a href="../news/index.html">行业咨询</a></li>
+            <li><a href="../contact/index.html">联系我们</a></li>
+            <!-- <div id="sideline" style="left: 104px"></div> -->
+            <div id="sideline" style="left: 164px; width: 56px"></div>
+          </ul>
+        </nav>
+      </div>
+      <div class="signboard">
+        <img src="../img/head_img.png" alt="" class="head_img" />
+        <div>
+          <p>抗皱抗初老</p>
+          <p>酵醒新美肌</p>
+          <a target="_blank" id="btn_buy">立即购买</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="sidebar">
+          <ul>
+            <li>
+              <img src="../img/p1.png" alt="" />
+            </li>
+            <li>
+              <img src="./img/10101.jpg" alt="" />
+            </li>
+            <li>
+              <img src="./img/10102.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="big">
+            <img src="../img/p1.png" alt="" />
+          </div>
+          <div class="text">
+            <div class="title">
+              <h2>补水保湿套装</h2>
+              <span class="price">
+                <em class="yen">¥</em>
+                <i>185</i>
+              </span>
+              <h4>雪耳多糖珍珠精华 深层沁养肌肤 打造水光肌</h4>
+            </div>
+            <div class="num">
+              <span class="params-name">数量</span>
+              <div class="select">
+                <span class="fa fa-minus-circle"></span>
+                <span class="item-num">
+                  <input type="text" maxlength="2" class="show" value="1" />
+                </span>
+                <span class="fa fa-plus-circle"></span>
+              </div>
+            </div>
+            <input class="buy" type="button" value="立即购买" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="fmenu">
+        <a href="/brand/">公司简介</a> 丨 <a href="/ppdt/">品牌动态</a> 丨
+        <a href="/news/">行业咨询</a> 丨 <a href="/contact/">联系我们</a> 丨
+        <a href="http://www.meijiajin.com/sitemap.html">网站地图</a> 丨
+        <a href="http://www.meijiajin.com/sitemap.xml">xml地图</a>
+        <br />Copyright ©2015 美加净官网 版权所有
+      </div>
+    </footer>
+    <script src="../js/jQuery/jquery-3.5.1.js"></script>
+    <script src="../index.js"></script>
+    <!-- <script src="../js/answer.js"></script> -->
+    <script>
+      $(function () {
+        var li = $(".sidebar li");
+        var big = $(".big img");
+        li[0].style.border = "3px solid #ccc";
+        li.click(function () {
+          $(this).siblings().removeAttr("style");
+          $(this).css("border", "3px solid #ccc");
+          //图片切换
+          big.attr("src", $(this).children("img").attr("src"));
+        });
+      });
+      var show = $(".item-num .show");
+      var btn = $(".select .fa");
+      btn[0].addEventListener("click", function () {
+        let num = parseInt(show.attr("value"));
+        if (num <= 1) {
+          return false;
+        }
+        show.attr("value", parseInt(show.attr("value")) - 1);
+      });
+      btn[1].addEventListener("click", function () {
+        let num = parseInt(show.attr("value"));
+        show.attr("value", num + 1);
+      });
+    </script>
+  </body>
+</html>

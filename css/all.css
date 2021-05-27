@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: rgb(254, 234, 243);
+}
+h2 {
+  font-size: 1.2em;
+}
+header {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  height: 140px;
+  min-width: 1000px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(209, 209, 209, 1),
+    rgba(255, 255, 255, 1)
+  );
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 1;
+}
+.seek {
+  float: right;
+  height: 28px;
+  width: 110px;
+  outline: none;
+  margin: 20px 40px 0 0;
+  padding: 0 38px 0 10px;
+  border: 1px solid pink;
+  border-radius: 20px;
+  background-image: url(../img/搜索.png);
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 17px;
+}
+.logo {
+  width: 100px;
+}
+.signboard {
+  position: relative;
+  align-self: center;
+  min-width: 200px;
+  height: 100px;
+}
+.signboard div {
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  width: 90px;
+  font-size: 0.8rem;
+  /* vertical-align: middle; */
+}
+.signboard .head_img {
+  height: 100px;
+  margin-right: 10px;
+}
+.signboard #btn_buy {
+  margin-top: 10px;
+  width: 64px;
+  height: 20px;
+  color: white;
+  font-size: 0.6rem;
+  line-height: 20px;
+}
+.signboard #btn_buy:active {
+  font-size: 0.59rem;
+  box-shadow: 1px 1px 1px 1px rgba(85, 85, 85, 0.678) inset;
+}
+#nav {
+  width: 680px;
+}
+#nav ul {
+  position: relative;
+  height: 50px;
+  margin-left: 20px;
+  line-height: 50px;
+  vertical-align: middle;
+  list-style-type: none;
+}
+#nav li {
+  float: left;
+  cursor: pointer;
+  margin-right: 40px;
+  font-size: 14px;
+}
+#nav li a {
+  color: black;
+}
+#nav #sideline {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: cornflowerblue;
+  transition: 0.4s;
+}
+#nav a:hover {
+  /* font-weight: bolder; */
+  color: rgb(78, 78, 78);
+}
+main,
+footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+footer {
+  /* height: 250px; */
+  background-color: #fee0ec;
+}
+.fmenu {
+  /* margin-top: 70px; */
+  padding-left: 250px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(114, 114, 114);
+}
+.fmenu a {
+  color: rgba(114, 114, 114);
+}
+#btn_buy {
+  display: inline-block;
+  cursor: pointer;
+  width: 76px;
+  height: 24px;
+  margin-top: 20px;
+  border: none;
+  background-color: rgba(201, 106, 139, 1);
+  text-align: center;
+  color: white;
+}
+#btn_buy:active {
+  background-color: rgb(173, 93, 121);
+}
